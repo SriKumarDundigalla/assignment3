@@ -12,6 +12,13 @@ login_password = (e) =>{
     }
     
 }
+login_password_focus = (e) =>
+{
+    let Lpasswordalert = document.getElementById("Lpasswordalert");
+    Lpasswordalert.hidden= false;
+    login_password(e)
+}
+
 login_email = (e) =>
 {
     let email = e.target.value
