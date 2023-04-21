@@ -39,14 +39,13 @@ check_pass = (e) => {
         e3.hidden=true;
     }
 
-
-
 }
 
 chech_match = (e) =>{
     let alert1 = document.getElementById("alert1")
     alert1.hidden =false;
     let password = document.getElementById("Password1").value
+    let button = document.getElementById('btnlogin')
     let password2 = e.target.value
     if(password2=="")
     {
@@ -55,10 +54,12 @@ chech_match = (e) =>{
     if(password===password2)
     {
         alert1.hidden =true;
+        button.disabled =false;
     }
+
 }
 
-name_required = (e) =>
+email_required = (e) =>
 {
     let email = e.target.value
     let Emailalert = document.getElementById("Emailalert")
@@ -74,4 +75,36 @@ name_required = (e) =>
     {
         Emailalert.hidden =true;
     }
+}
+
+lnreuired =(e) =>
+{
+    let ln = e.target.value;
+    let lnalert = document.getElementById("lnalert");
+    lnalert.hidden= false;
+    if(ln.length>0){
+        lnalert.hidden= true;
+    }
+}
+ln_on_focus = (e) =>
+{
+    let lnalert = document.getElementById("lnalert");
+    lnalert.hidden= false;
+    lnreuired(e)
+}
+
+fnreuired =(e) =>
+{
+    let fn = e.target.value;
+    let fnalert = document.getElementById("fnalert");
+    fnalert.hidden= false;
+    if(fn.length>0){
+        fnalert.hidden= true;
+    }
+}
+fn_on_focus = (e) =>
+{
+    let fnalert = document.getElementById("fnalert");
+    fnalert.hidden= false;
+    fnreuired(e)
 }

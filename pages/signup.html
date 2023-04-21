@@ -81,17 +81,33 @@
         <form class="pt-5" onsubmit="signup(event)" method="post" action="./welcome.html">
           <div class="row">
             <div class="col mb-3">
-              <label for="fn" class="form-label h3">First Name</label>
-                <input type="text" class="form-control" id="fn" placeholder="First Name" aria-describedby="First Name">
+              <label for="fn" class="form-label h3">First Name<i class="bi bi-asterisk astric pt-1"></i></label>
+                <input type="text" class="form-control" id="fn" placeholder="First Name" aria-describedby="First Name" onkeyup="fnreuired(event)" onclick="fn_on_focus(event)">
+                <span id="fnalert" hidden>
+                  <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <div>
+                      First Name is required
+                    </div>
+                  </div>
+                </span>
             </div>
             <div class="col mb-3">
-              <label for="ln" class="form-label h3">Last Name</label>
-              <input type="text" class="form-control" id="ln" placeholder="Last Name" aria-describedby="Last Name">
+              <label for="ln" class="form-label h3">Last Name<i class="bi bi-asterisk astric pt-1"></i></label>
+              <input type="text" class="form-control" id="ln" placeholder="Last Name" aria-describedby="Last Name" onkeyup="lnreuired(event)" onclick="ln_on_focus(event)">
+              <span id="lnalert" hidden>
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                  <div>
+                    Last Name required
+                  </div>
+                </div>
+              </span>
             </div>
           </div>
           <div class="mb-3">
             <label for="Email1" class="form-label h3">Email<i class="bi bi-asterisk astric pt-1"></i></label>
-            <input type="email" class="form-control" id="Email1" name="Email1" aria-describedby="email" placeholder="Email" required onkeyup="name_required(event)">
+            <input type="email" class="form-control" id="Email1" name="Email1" aria-describedby="email" placeholder="Email" required onkeyup="email_required(event)">
             <span id="Emailalert" hidden>
               <div class="alert alert-danger d-flex align-items-center" role="alert">
                 <i class="bi bi-exclamation-triangle-fill me-2"></i>
@@ -147,7 +163,7 @@
   
           </div>
           <div class="d-grid pb-3">
-            <button class="btn btn-primary" type="submit">Login</button>
+            <button class="btn btn-primary" type="submit" id="btnlogin"disabled>Login</button>
           </div>
         </form>
       </div>
