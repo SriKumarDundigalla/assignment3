@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 </head>
-<body>
+<body class="bg-light">
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
@@ -73,7 +73,7 @@
         <form class="pt-5" onsubmit="login_form(event)">
           <div class="mb-3">
             <label for="lEmail1" class="form-label h5">Email<i class="bi bi-asterisk astric pt-1"></i></label>
-            <input type="email" class="form-control" id="lEmail1" aria-describedby="emailHelp" required onkeyup="login_email(event)" >
+            <input type="email" class="form-control" id="lEmail1" aria-describedby="emailHelp" required onkeyup="login_email(event)" placeholder="abc@gmail.com">
             <span id="Lemailalert" hidden>
               <div class="alert alert-danger d-flex align-items-center" role="alert">
                 <i class="bi bi-exclamation-triangle-fill me-2"></i>
@@ -85,7 +85,7 @@
           </div>
           <div class="mb-3">
             <label for="lPassword1" class="form-label h5">Password<i class="bi bi-asterisk astric pt-1"></i></label>
-            <input type="password" class="form-control" id="lPassword1" required onkeyup="login_password(event)" onclick="login_password_focus(event)">
+            <input type="password" class="form-control" id="lPassword1" required onkeyup="login_password(event)" onclick="login_password_focus(event)" placeholder="password">
             <span id="Lpasswordalert" hidden>
               <div class="alert alert-danger d-flex align-items-center" role="alert">
                 <i class="bi bi-exclamation-triangle-fill me-2"></i>

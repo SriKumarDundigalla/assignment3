@@ -45,20 +45,20 @@ body { padding-top: 76px; }
 
 .About-section1 {
   
-    background-image: linear-gradient(110deg, #b59aff -20%, #ffffff00 100%);
+    background-image: linear-gradient(110deg, #b59aff -20%, #ffffff00 120%);
   }
   
   .About-section3 {
-    background-image: linear-gradient(110deg, #a3fffa -20%, #ffffff00 100%);
+    background-image: linear-gradient(110deg, #a3fffa -20%, #ffffff00 120%);
   }
   
   .About-section2 {
-    background-image: linear-gradient(110deg, #b2ffbb -20%, #ffffff00 100%);
+    background-image: linear-gradient(110deg, #b2ffbb -20%, #ffffff00 120%);
   }
   
   .About-section4 {
 
-    background-image: linear-gradient(110deg, hsl(0, 100%, 68%) -20%, #ffffff00 100%);
+    background-image: linear-gradient(110deg, hsl(0, 100%, 68%) -20%, #ffffff00 120%);
   }
   .bi-star {
     cursor: pointer;
