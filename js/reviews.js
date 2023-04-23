@@ -11,10 +11,10 @@ new Chart(ctx, {
 type: 'doughnut',
 data: {
 labels: [
-'Over all user review'
+    'satisfied','Unsatisfied'
 ],
 datasets: [{
-label: 'Review percentage',
+label: 'Over all user review based on star rating',
 data: [percentage, not_p],
 backgroundColor: [
 'rgb(54, 162, 235)',
