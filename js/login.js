@@ -39,11 +39,10 @@ login_email = (e) =>
 
 login_form = (e) =>
 {
-   
     e.preventDefault();
     const email = e.target.elements['lEmail1'].value;
     const password = e.target.elements['lPassword1'].value;
-    console.log(email,password)
+    window.location.href = 'landing_login.html';
     e.target.reset();
 }
 
