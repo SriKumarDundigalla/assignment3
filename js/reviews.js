@@ -58,7 +58,11 @@ let selectedRating = 0;
         });
 
         starIcon.addEventListener('click', () => {
-            selectedRating = index + 1;
+            if (selectedRating === index + 1) {
+                selectedRating = 0; // Deselect the rating
+              } else {
+                selectedRating = index + 1; // Select the rating
+              }
         });
     });
     form.addEventListener('submit', (event) => {
