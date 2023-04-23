@@ -125,9 +125,7 @@ let selectedRating = 0;
                     }
                 });
         
-                s.addEventListener('click', () => {
-                    selectedRating = index + 1;
-                });
+                
             })
             
         })
