@@ -31,44 +31,45 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./about.html">About Us</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="./course.html">Courses</a>
               </li>
     
               
-              <li class="nav-item">
-                <a class="nav-link" href="./reviews.html">Reviews</a>
-              </li>
+              
     
             </ul>
             <ul class="d-flex navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Courses</a>
+                  </li>
               <li class="nav-item">
-                <a class="nav-link" href="./login.html">Login</a>
+                <a class="nav-link" href="#">My Account</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./signup.html">Sign up</a>
+                <a class="nav-link" href="#">Sign out</a>
               </li>
             </ul>
          
           </div>
         </div>
       </nav>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-                    <div class="container-fluid py-5 bg-info">
-                      <h5 class="fw-bold fs-4" id="slogin"></h5>
-                      <p class="col-md-8 fs-4">Welcome to The Learning Place, it is a good start for a welcome page, as it is polite and personalizes the message for the user. However, if you want to make the welcome page more inspiring and engaging, you could consider adding more details about The Learning Place and how it can benefit the user.</p>
-                      <a href="./login.html"><button class="btn btn-light" type="button">Start Learning</button></a>
+                    <div class="container-fluid py-5 bg-info text-white">
+                      <h1 class="display-5" id="landlogin"></h1>
+
+                      
                     </div>
                   </div>
             </div>
         </div>
     </div>
+
     <footer class="fixed-bottom">
         <div class="container-fluid">
           <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -92,19 +93,25 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-
-window.onload = function() {
-    load_data()
+      <script>
+        window.onload = function() {
+  load_data();
 };
 
-load_data=( )=>{
-    let fn = sessionStorage.getItem("fn");
-    let ln = sessionStorage.getItem("ln");
-    let personName = fn + ln;
-    console.log(personName)
-    document.getElementById("slogin").innerHTML =`Thank you for joining The Learning Place, ${personName}!!!`;
-}
-    </script>
+load_data = () => {
+  let i = 0;
+  let txt = 'Thank you for visiting our Login Landing Page. Please note that we are still in the building stage of the page and it is currently unavailable for use. We apologize for any inconvenience this may cause, and we want to assure you that our team is working hard to complete the page as soon as possible. We will notify you as soon as the page is ready for use. Thank you for your patience and understanding.';
+  let speed = 20;
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("landlogin").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  typeWriter();
+};
+
+      </script>
 </body>
 </html>

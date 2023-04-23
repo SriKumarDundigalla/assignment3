@@ -67,15 +67,15 @@ login_email = (e) =>
 // The login_form function is called when the user submits the login form
 login_form = (e) =>
 {
-    // Prevent the form from submitting
-    e.preventDefault();
+     // Prevent the form from submitting
+     e.preventDefault();
 
     // Get the email and password values from the form
     const email = e.target.elements['lEmail1'].value;
     const password = e.target.elements['lPassword1'].value;
 
     // Log the email and password values to the console
-    console.log(email,password)
+    window.location.href = 'landing_login.html';
 
     // Reset the form
     e.target.reset();

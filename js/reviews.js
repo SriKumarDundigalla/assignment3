@@ -83,7 +83,7 @@ let selectedRating = 0;
         card.classList.add('col-sm-6', 'p-2');
         card.innerHTML = `
     
-    <div class="card text-white bg-secondary">
+    <div class="card text-white bg-secondary h-10">
       <div class="card-body">
         <h5 class="card-title ps-1 text-uppercase">${name}</h5>
         <p class="card-text ps-1">${review}</p>
